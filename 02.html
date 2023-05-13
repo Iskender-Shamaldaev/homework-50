@@ -72,6 +72,47 @@
         );
     };
 
+    const BreadCrumbs = props => {
+        return(
+            <div className="breadcrumbs content-breadcrumbs">
+                <span className="first content__first">{props.first}> <span className="second content__second">{props.receips}</span></span>
+            </div>
+        );
+    };
+
+    const SideBar = props => {
+        return (
+            <aside className="sidebar content__sidebar">
+                <span className="sidebar-text content__text">{props.ingredients}</span>
+                <nav className="sidebar-nav content__sidebar-nav">
+                    <ul className="sidebar-nav-list content__list">
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.other}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link">{props.enzymes}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.calcium}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.mold}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.leaven}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.dyes}</a>
+                        </li>
+                        <li className="sidebar-nav-item content__item">
+                            <a className="sidebar-nav-link content__link" href="#">{props.spices}</a>Специи для сыра
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        );
+    };
+
     const cheese = (
         <React.Fragment>
             <div>
@@ -87,7 +128,18 @@
                          number='+8 916 460-19-60'
                          call="Заказать звонок"
                 />
-
+                <div className="container content">
+                    <BreadCrumbs first="Главная" receips="Рецепты"/>
+                    <SideBar ingredients="Ингредиенты"
+                             other="Закваски для сыра"
+                             enzymes="Ферменты для сыра"
+                             calcium="Хлористый кальций"
+                             mold="Плесень для сыра"
+                             leaven="Кисломолочные закваски"
+                             dyes="Красители для сыра"
+                             spices="Специи для сыра"
+                    />
+                </div>
             </div>
 
         </React.Fragment>
@@ -98,39 +150,6 @@
 
 </script>
 
-<!--<div class="container content">-->
-<!--    <div class="breadcrumbs content-breadcrumbs">-->
-<!--        <span class="first content__first">Главная > <span class="second content__second">Рецепты</span></span>-->
-<!--    </div>-->
-
-<!--    <aside class="sidebar content__sidebar">-->
-<!--        <span class="sidebar-text content__text">Ингредиенты</span>-->
-<!--        <nav class="sidebar-nav content__sidebar-nav">-->
-<!--            <ul class="sidebar-nav-list content__list">-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Закваски для сыра</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link">Ферменты для сыра</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Хлористый кальций</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Плесень для сыра</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Кисломолочные закваски</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Красители для сыра</a>-->
-<!--                </li>-->
-<!--                <li class="sidebar-nav-item content__item">-->
-<!--                    <a class="sidebar-nav-link content__link" href="#">Специи для сыра</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </aside>-->
 
 <!--    <main class="main content__main">-->
 <!--        <h1 class="main-title content__main-title">pецепты сыров</h1>-->
