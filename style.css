@@ -1,0 +1,23 @@
+.person {
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid #eee;
+    box-shadow: 0 50px 50px #ccc;
+    width: 400px;
+    padding: 20px;
+}
+
+.pic {
+    width: 100%;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px auto;
+    justify-content: space-evenly;
+}
+
+h1,p {
+    color: white;
+}
