@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    const Header = props => {
+        return (
+            <header className="header">
+                <div className="container">
+                    <div className="header-top header__header-top">
+                        <nav className="main-nav header__main-nav">
+                            <ul className="main-nav__list header__list">
+                                <li className="main-nav__item header__item">
+                                    <a className="main-nav__link header__link" href="#">{props.recipes}</a>
+                                </li>
+                                <li className="main-nav__item header__item">
+                                    <a className="main-nav__link header__link" href="#">{props.delivery}</a>
+                                </li>
+                                <li className="main-nav__item header__item">
+                                    <a className="main-nav__link header__link" href="#">{props.calculator}</a>
+                                </li>
+                                <li className="main-nav__item header__item">
+                                    <a className="main-nav__link header__link" href="#">{props.reviews}</a>
+                                </li>
+                                <li className="main-nav__item header__item">
+                                    <a className="main-nav__link header__link" href="#">{props.contacts}</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button className="btn header__btn" type="button">{props.btn}</button>
+                    </div>
+                </div>
+                <div className="header-bottom header__header-bottom">
+                    <div className="container header-bottom-inner header__header-bottom-inner">
+                        <a className="logo header__logo" href="#">
+                            <img className="logo header__logo" src={props.src} alt="logo" />
+                        </a>
+                        <div className="delivery header__delivery">
+                            <div>
+                                <span className="text-1 header__text-1">{props.free}</span>
+                            </div>
+                            <div>
+                                <span className="text-2 header__text-2">{props.save}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span className="number header__number">{props.number}</span>
+                            <button className="btn-1 header__btn-1" type="button">{props.call}</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        );
+    };
+
+    const cheese = (
+        <React.Fragment>
+            <div>
+                <Header  recipes="Рецепты"
+                         delivery="Доставка и оплата"
+                         calculator="Калькулятор cыродела"
+                         reviews="Отзывы"
+                         contacts="Контакты"
+                         btn="Войти в аккаунт"
+                         src="images/logo.svg"
+                         free="Бесплатная доставка"
+                         save="Защита покупателей"
+                         number='+8 916 460-19-60'
+                         call="Заказать звонок"
+                />
+
+            </div>
+
+        </React.Fragment>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(cheese);
+
+</script>
+
+<!--<div class="container content">-->
+<!--    <div class="breadcrumbs content-breadcrumbs">-->
+<!--        <span class="first content__first">Главная > <span class="second content__second">Рецепты</span></span>-->
+<!--    </div>-->
+
+<!--    <aside class="sidebar content__sidebar">-->
+<!--        <span class="sidebar-text content__text">Ингредиенты</span>-->
+<!--        <nav class="sidebar-nav content__sidebar-nav">-->
+<!--            <ul class="sidebar-nav-list content__list">-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Закваски для сыра</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link">Ферменты для сыра</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Хлористый кальций</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Плесень для сыра</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Кисломолочные закваски</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Красители для сыра</a>-->
+<!--                </li>-->
+<!--                <li class="sidebar-nav-item content__item">-->
+<!--                    <a class="sidebar-nav-link content__link" href="#">Специи для сыра</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </aside>-->
+
+<!--    <main class="main content__main">-->
+<!--        <h1 class="main-title content__main-title">pецепты сыров</h1>-->
+
+<!--        <div class="receipts content__receipts">-->
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-1.jpg" alt="photo-1">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Молодые сыры</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-2.jpg" alt="">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Твердые сыры</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-3.jpg" alt="">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Полутвердые сыры</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-4.jpg" alt="">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Паста филата</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-5.jpg" alt="">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Кисломолочные сыры</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="receipts-item content__receipts-item">-->
+<!--                <img class="receipts-img content__receipts-img" src="images/photo-6.jpg" alt="">-->
+
+<!--                <div class="receipts-info content__receipts-info">-->
+<!--                    <p class="receipts-text content__receipts-text">Рассольные сыры</p>-->
+<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <hr class="line content__line">-->
+<!--        <div class="last content__last">-->
+<!--            <h2 class="last-title content__last-title">Последние добавленные</h2>-->
+
+<!--            <div class="added content__added">-->
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-1.1.jpg" alt="photo-1">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">Сырная тарелка</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-2.2.jpg" alt="">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">Откуда в сыре дырки?</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-3.3.jpg" alt="">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">Сырная диета</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-4.4.jpg" alt="">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">посол сырной головки</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-5.5.jpg" alt="">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">Сырная тарелка</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="added-item content__added-item">-->
+<!--                    <img class="added-img content__added-img" src="images/photo-6.6.jpg" alt="">-->
+
+<!--                    <div class="added-info content__added-info">-->
+<!--                        <p class="added-text content__added-text">Откуда в сыре дырки?</p>-->
+<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
+<!--                            структуре швейцарских сортов...</p>-->
+<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <button class="btn-3 content&#45;&#45;btn-3" type="button">Заказать еще</button>-->
+<!--        </div>-->
+<!--    </main>-->
+<!--</div>-->
+
+<!--<footer class="footer">-->
+<!--    <div class="container">-->
+<!--        <div class="row footer__row">-->
+<!--            <span class="footer__text">Способы оплаты</span>-->
+<!--            <div class="footer-links footer__footer-links">-->
+<!--                <a class="mastercard footer-links__mastercard" href="#"></a>-->
+<!--                <a class="visa footer-links__visa" href="#"></a>-->
+<!--                <a class="wallet footer-links__wallet" href="#"></a>-->
+<!--            </div>-->
+<!--            <span class="footer__text-1">г. Москва, улица Свободы 1/7</span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+</body>
+
+</html>
