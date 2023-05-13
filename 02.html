@@ -245,6 +245,24 @@
         );
     };
 
+    const Footer = props => {
+        return (
+            <footer className="footer">
+                <div className="container">
+                    <div className="row footer__row">
+                        <span className="footer__text">{props.pay}</span>
+                        <div className="footer-links footer__footer-links">
+                            <a className="mastercard footer-links__mastercard" href="#"></a>
+                            <a className="visa footer-links__visa" href="#"></a>
+                            <a className="wallet footer-links__wallet" href="#"></a>
+                        </div>
+                        <span className="footer__text-1">{props.address}</span>
+                    </div>
+                </div>
+            </footer>
+        );
+    };
+
     const cheese = (
         <React.Fragment>
             <div>
@@ -315,7 +333,7 @@
                              btn1="Заказать еще"
                     />
                 </div>
-
+                <Footer pay="Способы оплаты" address="г. Москва, улица Свободы 1/7"/>
             </div>
 
         </React.Fragment>
@@ -325,20 +343,6 @@
     ReactDOM.createRoot(root).render(cheese);
 
 </script>
-
-<!--<footer class="footer">-->
-<!--    <div class="container">-->
-<!--        <div class="row footer__row">-->
-<!--            <span class="footer__text">Способы оплаты</span>-->
-<!--            <div class="footer-links footer__footer-links">-->
-<!--                <a class="mastercard footer-links__mastercard" href="#"></a>-->
-<!--                <a class="visa footer-links__visa" href="#"></a>-->
-<!--                <a class="wallet footer-links__wallet" href="#"></a>-->
-<!--            </div>-->
-<!--            <span class="footer__text-1">г. Москва, улица Свободы 1/7</span>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
 </body>
 
 </html>
