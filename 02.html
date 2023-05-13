@@ -113,6 +113,138 @@
         );
     };
 
+    const Content = props => {
+        return (
+            <main className="main content__main">
+                <h1 className="main-title content__main-title">{props.receipts}</h1>
+
+                <div className="receipts content__receipts">
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src} alt="photo-1"/>
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.new}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.watch}</a>
+                            </div>
+                    </div>
+
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src2} alt=""/>
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.hard}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.see}></a>
+                            </div>
+                    </div>
+
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src3} alt="" />
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.semiHard}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.see1}></a>
+                            </div>
+                    </div>
+
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src4} alt=""/>
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.pasta}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.see2}></a>
+                            </div>
+                    </div>
+
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src5} alt=""/>
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.sourMilk}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.see3}></a>
+                            </div>
+                    </div>
+
+                    <div className="receipts-item content__receipts-item">
+                        <img className="receipts-img content__receipts-img" src={props.src6} alt=""/>
+
+                            <div className="receipts-info content__receipts-info">
+                                <p className="receipts-text content__receipts-text">{props.pickled}</p>
+                                <a className="receipts-link content__receipts-link" href="#">{props.see4}></a>
+                            </div>
+                    </div>
+                </div>
+                <hr className="line content__line"/>
+                    <div className="last content__last">
+                        <h2 className="last-title content__last-title">{props.last}</h2>
+
+                        <div className="added content__added">
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src={props.src11} alt="photo-1"/>
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.plate}</p>
+                                        <p className="added-text-2 content__added-text-2">{props.espessialy}</p>
+                                        <a className="added-link content__added-link" href="#">{props.reed}></a>
+                                    </div>
+                            </div>
+
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src={props.src22} alt=""/>
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.holes}</p>
+                                        <p className="added-text-2 content__added-text-2">{props.text1}</p>
+                                        <a className="added-link content__added-link" href="#">{props.reed1}></a>
+                                    </div>
+                            </div>
+
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src={props.src33} alt=""/>
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.diet}</p>
+                                        <p className="added-text-2 content__added-text-2">{props.text2}</p>
+                                        <a className="added-link content__added-link" href="#">{props.reed2}></a>
+                                    </div>
+                            </div>
+
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src={props.src44} alt=""/>
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.head1}</p>
+                                        <p className="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в
+                                            структуре швейцарских сортов...</p>
+                                        <a className="added-link content__added-link" href="#">Читать далее ></a>
+                                    </div>
+                            </div>
+
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src="images/photo-5.5.jpg" alt=""/>
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.table1}</p>
+                                        <p className="added-text-2 content__added-text-2">{props.text3}</p>
+                                        <a className="added-link content__added-link" href="#">{props.reed3}></a>
+                                    </div>
+                            </div>
+
+                            <div className="added-item content__added-item">
+                                <img className="added-img content__added-img" src={props.src66} alt="" />
+
+                                    <div className="added-info content__added-info">
+                                        <p className="added-text content__added-text">{props.holes1}</p>
+                                        <p className="added-text-2 content__added-text-2">{props.text4}</p>
+                                        <a className="added-link content__added-link" href="#">{props.reed4}></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <button className="btn-3 content--btn-3" type="button">{props.btn1}</button>
+                    </div>
+            </main>
+        );
+    };
+
     const cheese = (
         <React.Fragment>
             <div>
@@ -139,7 +271,51 @@
                              dyes="Красители для сыра"
                              spices="Специи для сыра"
                     />
+                    <Content receipts="pецепты сыров"
+                             src="images/photo-1.jpg"
+                             new="Молодые сыры"
+                             watch="Смотреть"
+                             src2="images/photo-2.jpg"
+                             hard="Твердые сыры"
+                             see="Смотреть"
+                             src3="images/photo-3.jpg"
+                             semiHard="Полутвердые сыры"
+                             see1="Смотреть"
+                             src4="images/photo-4.jpg"
+                             pasta="паста филата"
+                             see2="Смотреть"
+                             src5="images/photo-5.jpg"
+                             sourMilk="Кисломолочные сыры"
+                             see3="Смотреть"
+                             src6="images/photo-6.jpg"
+                             pickled="Рассольные сыры"
+                             see4="Смотреть"
+                             last="Последние добавленные"
+                             src11="images/photo-1.1.jpg"
+                             plate="Сырная тарелка"
+                             espessialy="Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов..."
+                             reed="Читать далее"
+                             src22="images/photo-2.2.jpg"
+                             holes="Откуда в сыре дырки?"
+                             text1="Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов..."
+                             reed1="Читать далее"
+                             src33="images/photo-3.3.jpg"
+                             diet="Сырная диета"
+                             text2="Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов..."
+                             reed2="Читать далее"
+                             src44="images/photo-4.4.jpg"
+                             head1="посол сырной головки"
+                             table1="Сырная тарелка"
+                             text3="Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов..."
+                             reed3="Читать далее"
+                             src66="images/photo-6.6.jpg"
+                             holes1="Откуда в сыре дырки?"
+                             text4="Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов..."
+                             reed4="Читать далее"
+                             btn1="Заказать еще"
+                    />
                 </div>
+
             </div>
 
         </React.Fragment>
@@ -149,141 +325,6 @@
     ReactDOM.createRoot(root).render(cheese);
 
 </script>
-
-
-<!--    <main class="main content__main">-->
-<!--        <h1 class="main-title content__main-title">pецепты сыров</h1>-->
-
-<!--        <div class="receipts content__receipts">-->
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-1.jpg" alt="photo-1">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Молодые сыры</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-2.jpg" alt="">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Твердые сыры</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-3.jpg" alt="">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Полутвердые сыры</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-4.jpg" alt="">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Паста филата</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-5.jpg" alt="">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Кисломолочные сыры</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="receipts-item content__receipts-item">-->
-<!--                <img class="receipts-img content__receipts-img" src="images/photo-6.jpg" alt="">-->
-
-<!--                <div class="receipts-info content__receipts-info">-->
-<!--                    <p class="receipts-text content__receipts-text">Рассольные сыры</p>-->
-<!--                    <a class="receipts-link content__receipts-link" href="#">Смотреть ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <hr class="line content__line">-->
-<!--        <div class="last content__last">-->
-<!--            <h2 class="last-title content__last-title">Последние добавленные</h2>-->
-
-<!--            <div class="added content__added">-->
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-1.1.jpg" alt="photo-1">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">Сырная тарелка</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-2.2.jpg" alt="">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">Откуда в сыре дырки?</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-3.3.jpg" alt="">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">Сырная диета</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-4.4.jpg" alt="">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">посол сырной головки</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-5.5.jpg" alt="">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">Сырная тарелка</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="added-item content__added-item">-->
-<!--                    <img class="added-img content__added-img" src="images/photo-6.6.jpg" alt="">-->
-
-<!--                    <div class="added-info content__added-info">-->
-<!--                        <p class="added-text content__added-text">Откуда в сыре дырки?</p>-->
-<!--                        <p class="added-text-2 content__added-text-2">Особенно характерно наличие дырочек разных размеров в-->
-<!--                            структуре швейцарских сортов...</p>-->
-<!--                        <a class="added-link content__added-link" href="#">Читать далее ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <button class="btn-3 content&#45;&#45;btn-3" type="button">Заказать еще</button>-->
-<!--        </div>-->
-<!--    </main>-->
-<!--</div>-->
 
 <!--<footer class="footer">-->
 <!--    <div class="container">-->
