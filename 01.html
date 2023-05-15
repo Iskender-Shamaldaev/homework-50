@@ -12,9 +12,9 @@
 <div id="root"></div>
 
 <script type="text/babel">
-    const Person = props => {
+    const Movie = props => {
         return (
-            <div className="person">
+            <div className="film">
                 <img className="pic" alt="pic" src={props.url} />
                 <h1>{props.name}</h1>
                 <p>Year of issue: {props.year}</p>
@@ -25,9 +25,9 @@
     const films = (
         <React.Fragment>
             <div className="wrap">
-                <Person url='https://www.themoviedb.org/t/p/original/gjolEycpddEirN0Tui92Zglprhb.jpg' name="The Billionaire" year={2011} />
-                <Person url='https://images.prom.ua/1650115941_w640_h640_poster-plakat-igra.jpg' name="Game of Thrones" year={2001} />
-                <Person url='https://www.themoviedb.org/t/p/original/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg' name="Peaky Blinders" year={2013} />
+                <Movie  url='https://www.themoviedb.org/t/p/original/gjolEycpddEirN0Tui92Zglprhb.jpg' name="The Billionaire" year={2011} />
+                <Movie url='https://images.prom.ua/1650115941_w640_h640_poster-plakat-igra.jpg' name="Game of Thrones" year={2001} />
+                <Movie url='https://www.themoviedb.org/t/p/original/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg' name="Peaky Blinders" year={2013} />
             </div>
 
         </React.Fragment>
