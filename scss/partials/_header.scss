@@ -1,0 +1,160 @@
+@use 'mixin'as *;
+@use 'var'as *;
+
+.header {
+
+
+    &__header-top {
+        padding: 13px 0 12px 0;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @include md {
+            display: flex;
+        }
+    }
+
+    &__main-nav {
+
+        &__list {
+
+            @include sm {
+                display: flex;
+            }
+        }
+
+        &__item {
+
+            @include sm {
+                margin-right: 10px;
+            }
+
+            @include lg {
+                margin-right: 23px;
+            }
+        }
+    }
+
+    &__btn {
+        color: $brandColor;
+        border: none;
+        background: url(../images/user.svg) no-repeat;
+        padding-left: 26px;
+        margin-right: -6px;
+
+        @include md {
+            margin-left: auto;
+        }
+
+    }
+
+    &__header-bottom {
+        text-align: center;
+        padding: 12px 0 10px;
+        border: 2px solid #E7E7E7;
+    }
+
+    &__header-bottom-inner {
+
+        
+        @include sm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        @include lg {
+           justify-content: space-between;
+        }
+
+    }
+
+    &__logo {
+        margin-bottom: 15px;
+
+         @include lg {
+            margin-bottom: 0;
+         }
+    }
+
+    &__delivery {
+        font-size: 13px;
+        line-height: 16px;
+        color: $greyLight;
+
+          @include lg {
+              display: flex;
+              width: 285px;
+          }
+    }
+
+    &__text-1 {
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+        max-width: 80px;
+
+        @include lg {
+            margin-right: 98px;
+        }
+    }
+
+    &__text-1::before {
+        position: absolute;
+        content: '';
+        top: 3px;
+        left: -4px;
+        width: 24px;
+        height: 24px;
+        background: url(../images/delivery.svg)no-repeat;
+    }
+
+
+    &__text-2 {
+        position: relative;
+        padding-left: 30px;
+        display: inline-block;
+        margin: 15px 0;
+        max-width: 80px;
+
+         @include lg {
+             margin: 0;
+         }
+    }
+
+    &__text-2::before {
+        position: absolute;
+        content: '';
+        top: 3px;
+        left: -3px;
+        width: 28px;
+        height: 28px;
+        background: url(../images/security.svg)no-repeat;
+    }
+
+    &__number {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: $brownLight;
+        margin-bottom: 15px;
+
+        @include lg {
+           margin-bottom: 3px;
+        }
+    }
+
+    &__btn-1 {
+        font-size: 12px;
+        line-height: 18px;
+        color: $orangeColor;
+        border: none;
+        background: url(../images/phone.svg)left 5px center no-repeat;
+        padding: 6px 9px 6px 30px;
+        border: 1px solid $orangeColor;
+        border-radius: 4px;
+        display: inline-block;
+    }
+}

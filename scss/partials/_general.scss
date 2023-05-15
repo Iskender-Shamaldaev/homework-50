@@ -1,0 +1,86 @@
+@use 'mixin'as mixin;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 24px;
+  background: #FFFBED;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  color: inherit;
+  background: inherit;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin make-cols {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      width: $i / 12 * 100%;
+      padding: 0 16px;
+    }
+  }
+}
+
+.col {
+  @include make-cols;
+}
+
+@include mixin.sm {
+  .col-sm {
+    @include make-cols;
+  }
+}
+
+@include mixin.md {
+  .col-md {
+    @include make-cols;
+  }
+}
+
+@include mixin.lg {
+  .col-lg {
+    @include make-cols;
+  }
+}
+
+@include mixin.xl {
+  .col-xl {
+    @include make-cols;
+  }
+}
+
+@include mixin.xxl {
+  .col-xxl {
+    @include make-cols;
+  }
+}

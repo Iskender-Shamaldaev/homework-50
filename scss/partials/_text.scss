@@ -1,0 +1,10 @@
+.text {
+    font-size: 13px;
+    line-height: 16px;
+    color: #808080;
+    background: url(../images/delivery.svg) no-repeat;
+
+    &_bg {
+        background: url(../images/security.svg) no-repeat;
+    }
+}

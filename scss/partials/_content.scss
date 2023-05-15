@@ -1,0 +1,215 @@
+@use 'mixin'as *;
+@use 'var'as *;
+
+.content {
+  @include md {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 280px 1fr;
+  }
+
+  &-breadcrumbs {
+    color: $greyLight;
+    letter-spacing: 0.01em;
+    font-family: $fontFamily;
+    padding: 12px 0 11px;
+
+    @include md {
+      grid-column: 1/3;
+    }
+  }
+
+  &__second {
+    color: $orangeColor;
+  }
+
+  &__sidebar {
+
+    @include md {
+      grid-column: 1/2;
+    }
+
+  }
+
+  &__text {
+    display: block;
+    color: $brownLight;
+    padding: 13px 0 11px 42px;
+    background: url(../images/cheese.svg)left 12px top 12px no-repeat #FBE8BB;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &__sidebar-nav {
+    border: 1px solid #E7E7E7;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    background: #fff;
+  }
+
+  &__item {
+    padding: 9px 0 12px 16px;
+    border-bottom: 1px solid #E7E7E7;
+  }
+
+  &__link {
+    color: $brandColor;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+
+  &__main {
+
+
+    @include md {
+      grid-column: 2/3;
+    }
+
+  }
+
+  &__main-title {
+    font-family: $fontFamily;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    color: $brownLight;
+    margin: 0 0 30px 0;
+  }
+
+  &__line {
+    border: 1px solid #E7E7E7;
+    margin-top: 52px;
+  }
+
+  &__last {
+
+
+    @include md {
+      grid-column: 2/3;
+    }
+
+  }
+
+  &__last-title {
+    font-family: $fontFamily;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: $brownLight;
+    margin: 39px 0 20px 0;
+  }
+
+  &--btn-3 {
+    font-size: 16px;
+    color: $white;
+    padding: 15px 51px;
+    background: $orangeColor;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__receipts {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+  }
+
+  &__receipts-item {
+    display: grid;
+  }
+
+  &__receipts-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &__receipts-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+    padding-left: 2px;
+    margin: 0;
+  }
+
+  &__receipts-info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+    color: #fff;
+    padding: 0 0 8px 14px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 52.6%, rgba(0, 0, 0, 0.72) 100%);
+  }
+
+  &__receipts-link {
+    text-decoration: none;
+    color: $orangeColor;
+  }
+
+  &__added {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+    margin-bottom: 30px;
+  }
+
+  &__added-item {
+    display: grid;
+  }
+
+  &__added-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: block;
+  }
+
+  &__added-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $brownLight;
+    margin: 18px 0 0 7px;
+    text-transform: uppercase;
+    font-family: $fontFamily;
+  }
+
+  &__added-text-2 {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 3px 0 0 7px;
+    max-width: 240px;
+    flex-grow: 1;
+  }
+
+  &__added-info {
+    align-self: end;
+    color: #fff;
+    padding: 0 0 8px 14px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+     grid-row: 280/2;
+  }
+
+  &__added-link {
+    text-decoration: underline;
+    color: $orangeColor;
+    font-size: 16px;
+    display: inline-block;
+    margin: 29px 0 11px 7px;
+  }
+}

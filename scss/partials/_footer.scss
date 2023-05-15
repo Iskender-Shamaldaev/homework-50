@@ -1,0 +1,29 @@
+@use 'var'as *;
+@use 'mixin'as *;
+
+.footer {
+    padding: 33px 0 31px 0;
+    background: $white;
+    margin-top: 96px;
+
+    &__row {
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 21px;
+        color: $brandColor;
+        margin-bottom: 10px;
+    }
+
+    &__text-1 {
+        color: $brandColor;
+        margin-right: 5px;
+
+        @include sm {
+            margin-left: auto;
+            margin-top: -11px;
+        }
+    }
+}
